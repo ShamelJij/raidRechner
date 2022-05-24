@@ -11,6 +11,13 @@
     <!-- CSS file - -->
     <link rel="stylesheet" href="style.css">
 
+    <style>
+        .vl {
+          border-left: 1px solid rgb(114, 114, 114);
+          height: auto;
+        }
+        </style>
+
     <title>Raid-Rechner</title>
   </head>
   <body>
@@ -53,20 +60,23 @@
     <div class="container text-center">
         <button type="button" class="btn btn-primary" onclick="ausrechnen()">Ausrechnen</button>
     </div>
+    <hr class="mx-5">
     <div class="container p-5">
         <div class="row">
-            <div class="col text-center text-success">
+            <div class="col-md text-center text-success">
                 <label for="Netto-Kapazität">Brutto-Kapazität:</label>
                 <br>
                     <span id="brutto"></span>
             </div>
-            <div class="col text-center text-info">
+            <div class="vl"></div>
+            <div class="col-md text-center text-info">
                 <label for="Netto-Kapazität">Netto-Kapazität:</label>
                 <br>
                     <span id="netto"></span>
             </div>
-            <div class="col text-center text-danger">
-                <label for="Netto-Kapazität">Speicher-Effizienz:</label>
+            <div class="vl"></div>
+            <div class="col-md text-center text-danger">
+                <label for="Netto-Kapazität">Speicher-Effizienz in %:</label>
                 <br>
                     <span id="effizienz"></span>
             </div>

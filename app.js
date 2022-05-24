@@ -15,31 +15,40 @@ function ausrechnen(){
     document.getElementById("brutto").innerHTML = brutto;
     switch (document.getElementById("level").value){
         case "0":
-            document.getElementById("netto").innerHTML = brutto;
+            netto = brutto;
         break;
         case "1":
-            document.getElementById("netto").innerHTML = brutto/2;
+            netto = brutto/2;
         break;
         case "5":
             if(anzahl.value >= 3){
-                document.getElementById("netto").innerHTML = (anzahl.value-1) * kapazitaeten[kapazitaet.value];
+                netto = (anzahl.value-1) * kapazitaeten[kapazitaet.value];
             }
             else{
-                document.getElementById("netto").innerHTML = "Nicht genügend Platten!";
+                netto = 0;
             }
         break;
         case "6":
             if(anzahl.value >= 4){
-                document.getElementById("netto").innerHTML = (anzahl.value-2) * kapazitaeten[kapazitaet.value];
+                netto = (anzahl.value-2) * kapazitaeten[kapazitaet.value];
             }
             else{
-                document.getElementById("netto").innerHTML = "Nicht genügend Platten!";
+                netto = 0;
             }
         break;
         case "10":
-            document.getElementById("netto").innerHTML = brutto/2;
+            netto = brutto/2;
         break;
         default:
-            document.getElementById("netto").innerHTML = "jBoD";
+            netto = "jBoD";
     }
+        if(netto > 0 )
+        {
+            document.getElementById("netto").innerHTML = netto + " TB"
+        }else{
+            document.getElementById("netto").innerHTML = "Nicht genügend Platten!";
+        }
+    let effizienz = netto/brutto*100;
+    effizienz = effizienz.toFixed(2);
+    document.getElementById("effizienz").innerHTML = effizienz;
 }
