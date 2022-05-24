@@ -37,18 +37,47 @@
                 <div class="form-group">
                     <label for="festplattenzahl">Festplattenanzahl:</label>
                     <span id="anzahlText"></span>
-                    <input class="form-control" type="range" id="anzahl" oninput="ausrechnen()" step="1" min="1" max="10">
+                    <input class="form-control" type="range" id="anzahl" oninput="erfassen()" step="1" min="1" max="10">
                 </div>
             </div>
             <div class="col">
                 <div class="form-group">
                     <label for="kapazität">Kapazität:</label>
                     <span id="kapazitaetText"></span>
-                    <input class="form-control" type="range" id="kapazitaet" oninput="ausrechnen()" step="1" min="0" max="4">
+                    <input class="form-control" type="range" id="kapazitaet" oninput="erfassen()" step="1" min="0" max="4">
                 </div>
             </div>
         </div>
     </div>
+    </div>
+    <div class="container text-center">
+        <button type="button" class="btn btn-primary" onclick="ausrechnen()">Ausrechnen</button>
+    </div>
+    <div class="container p-5">
+        <div class="row">
+            <div class="col text-center text-success">
+                <label for="Netto-Kapazität">Brutto-Kapazität:</label>
+                <br>
+                    <span id="brutto"></span>
+            </div>
+            <div class="col text-center text-info">
+                <label for="Netto-Kapazität">Netto-Kapazität:</label>
+                <br>
+                    <span id="netto"></span>
+            </div>
+            <div class="col text-center text-danger">
+                <label for="Netto-Kapazität">Speicher-Effizienz:</label>
+                <br>
+                    <span id="effizienz"></span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 id=""></h2>
+            </div>
+        </div>
     </div>
     <!-- JavaScript files -->
     <script src="./app.js"></script>
