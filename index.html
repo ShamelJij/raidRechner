@@ -14,18 +14,39 @@
     <title>Raid-Rechner</title>
   </head>
   <body>
-    
+    <div class="containr text-center p-5">
+        <h1>Raid-Rechner</h1>
+    </div>
     <div class="gradient-border" id="box">
     <div class="container">
-        <div>
-            <select name="raid" id="level">
-                <option value="jBoD">jBoD</option>
-                <option value="0">Raid 0</option>
-                <option value="1">Raid 1</option>
-                <option value="5">Raid 5</option>
-                <option value="6">Raid 6</option>
-                <option value="10">Raid 10</option>
-            </select>
+        <div class="row p-5">
+            <div class="col">
+                <div class="form-group">
+                    <label for="waehlensie">Wählen Sie ein Raid-Level:</label>
+                    <select  class="browser-default custom-select" name="raid" id="level">
+                        <option value="jBoD">jBoD</option>
+                        <option value="0">Raid 0</option>
+                        <option value="1">Raid 1</option>
+                        <option value="5">Raid 5</option>
+                        <option value="6">Raid 6</option>
+                        <option value="10">Raid 10</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="festplattenzahl">Festplattenanzahl:</label>
+                    <span id="anzahlText"></span>
+                    <input class="form-control" type="range" id="anzahl" oninput="ausrechnen()" step="1" min="1" max="10">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="kapazität">Kapazität:</label>
+                    <span id="kapazitaetText"></span>
+                    <input class="form-control" type="range" id="kapazitaet" oninput="ausrechnen()" step="1" min="0" max="4">
+                </div>
+            </div>
         </div>
     </div>
     </div>
